@@ -15,6 +15,9 @@ import { IconHome } from '../assets/icon/IconHome';
 import { IconCalendar } from '../assets/icon/IconCalendar';
 import { IconThreeDots } from '../assets/icon/IconThreeDots';
 import { IconChart } from '../assets/icon/IconChart';
+import { IconStrategy } from '../assets/icon/IconStrategy';
+import { IconLesson } from '../assets/icon/IconLesson';
+import { IconPeople } from '../assets/icon/IconPeople';
 
 const BottomTabContent = React.memo(function BottomTabContent() {
   const navigation = useNavigation();
@@ -22,29 +25,21 @@ const BottomTabContent = React.memo(function BottomTabContent() {
   const route = useRoute();
   const dispatch = useDispatch();
   const { token } = useSelector((state: RootState) => state.auth);
-  const currentRoute = getFocusedRouteNameFromRoute(route) ?? 'Sales';
+  const currentRoute = getFocusedRouteNameFromRoute(route) ?? 'Home';
+
+  console.log(currentRoute);
 
   const getColor = (name: string, index: number): string => {
     if (currentRoute === undefined) {
-      return index === 0 ? 'red' : '';
+      return index === 0 ? '#EB4442' : '';
     }
 
     if (name === currentRoute) {
-      return 'primary.700';
+      return '#EB4442';
     }
 
-    return '';
+    return '#71717A';
   };
-
-  const getInvoice = async () => {
-    ApiService.getOrder().then((res) => {
-      dispatch(setListInvoice(res.data.data));
-    });
-  };
-
-  useEffect(() => {
-    getInvoice();
-  }, []);
 
   return (
     <View style={[styles.main, { backgroundColor: theme.background }]}>
@@ -64,14 +59,18 @@ const BottomTabContent = React.memo(function BottomTabContent() {
                 {icon === IconBottom.HOME && (
                   <IconHome color={getColor(name, index)} />
                 )}
-                {icon === IconBottom.THREEDOTS && (
-                  <IconThreeDots color={getColor(name, index)} />
+                {icon === IconBottom.STRATEGY && (
+                  <IconStrategy color={getColor(name, index)} />
                 )}
-                {icon === IconBottom.CHART && (
-                  <IconChart color={getColor(name, index)} />
+                {icon === IconBottom.LESSON && (
+                  <IconLesson color={getColor(name, index)} />
                 )}
-                {icon === IconBottom.CALENDAR && (
-                  <IconCalendar color={getColor(name, index)} />
+                {icon === IconBottom.INFO && (
+                  <IconPeople
+                    width={24}
+                    height={24}
+                    color={getColor(name, index)}
+                  />
                 )}
               </View>
             </TouchableOpacity>
@@ -91,13 +90,6 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
     paddingVertical: 7,
-    borderTopWidth: 0.5,
-    borderColor: '#F9F9F9',
-    shadowOpacity: 0.05,
-    shadowOffset: {
-      width: 1,
-      height: 1,
-    },
   },
   main: {
     alignItems: 'center',

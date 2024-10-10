@@ -1,23 +1,13 @@
 import * as React from 'react';
-import { ApiService } from '../../lib/axios';
 import {
-  Checkbox,
-  Image,
-  KeyboardAvoidingView,
-  Spacer,
-  useToast,
-} from 'native-base';
-import {
-  Box,
-  Text,
-  Heading,
-  Column,
-  FormControl,
-  Input,
-  Link,
   Button,
-  Row,
   Center,
+  Column,
+  Heading,
+  Image,
+  Input,
+  KeyboardAvoidingView,
+  Text,
 } from 'native-base';
 
 // navigation
