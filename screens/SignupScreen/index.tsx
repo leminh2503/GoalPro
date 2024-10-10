@@ -1,6 +1,12 @@
 import * as React from 'react';
 import { ApiService } from '../../lib/axios';
-import { useToast } from 'native-base';
+import {
+  Checkbox,
+  Image,
+  KeyboardAvoidingView,
+  Spacer,
+  useToast,
+} from 'native-base';
 import {
   Box,
   Text,
@@ -17,68 +23,109 @@ import {
 // navigation
 import { RootStackParamList } from '../../navigation/types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { Platform } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Signup'>;
 
 export const SignupScreen: React.FC<Props> = (props) => {
-  const toast = useToast();
-  const [email, onChangeEmail] = React.useState('');
-  const [first_name, onChangeFirstName] = React.useState('');
-  const [last_name, onChangeLastName] = React.useState('');
-  const [password, onChangePassword] = React.useState('');
+  const insets = useSafeAreaInsets();
   const onPressSignup = async () => {
-    const values = {
-      email,
-      password,
-      first_name,
-      last_name,
-    };
-    ApiService.signup(values).then(() => {
-      toast.show({
-        description: 'Signed in successfully',
-      });
-      setTimeout(() => {
-        props.navigation.navigate('Signin');
-      }, 1000);
-    });
+    setTimeout(() => {
+      props.navigation.navigate('Otp');
+    }, 1000);
   };
-  const onPressSigninLink = async () => {
+  const onPressSignInLink = async () => {
     props.navigation.navigate('Signin');
   };
   return (
-    <Center width="100%">
-      <Box safeArea p="2" py="8" w="90%">
-        <Heading>Register your account</Heading>
-        <Column space={3} mt="5">
-          <FormControl>
-            <FormControl.Label>Email</FormControl.Label>
-            <Input value={email} onChangeText={onChangeEmail} type="text" />
-          </FormControl>
-          <FormControl>
-            <FormControl.Label>First Name</FormControl.Label>
-            <Input value={first_name} onChangeText={onChangeFirstName} />
-          </FormControl>
-          <FormControl>
-            <FormControl.Label>Last Name</FormControl.Label>
-            <Input value={last_name} onChangeText={onChangeLastName} />
-          </FormControl>
-          <FormControl>
-            <FormControl.Label>Password</FormControl.Label>
-            <Input
-              value={password}
-              onChangeText={onChangePassword}
-              type="password"
-            />
-          </FormControl>
+    <KeyboardAvoidingView
+      style={{
+        flex: 1,
+        marginBottom: insets.bottom,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+    >
+      <Center width="100%">
+        <Column space={2} p="2" py="8" w="90%">
+          <Image
+            style={{
+              width: 100,
+              height: 100,
+              alignSelf: 'center',
+              marginBottom: 20,
+            }}
+            resizeMode="contain"
+            source={require('../../assets/images/logo.png')}
+          ></Image>
+          <Heading color="primary.700" textAlign="center" size="2xl">
+            Đăng ký
+          </Heading>
+          <Text color="primary.100" textAlign="center">
+            Đăng ký tài khoản của bạn
+          </Text>
+          <Input
+            borderColor="#3F3F46"
+            color="primary.200"
+            placeholderTextColor="#71717A"
+            mt={3}
+            type="text"
+            placeholder="Tên"
+            size="2xl"
+            bgColor="primary.50"
+            borderRadius={12}
+          />
+          <Input
+            borderColor="#3F3F46"
+            color="primary.200"
+            placeholderTextColor="#71717A"
+            type="text"
+            placeholder="Email"
+            size="2xl"
+            bgColor="primary.50"
+            borderRadius={12}
+          />
+          <Input
+            borderColor="#3F3F46"
+            color="primary.200"
+            placeholderTextColor="#71717A"
+            type="password"
+            placeholder="Mật khẩu"
+            size="2xl"
+            bgColor="primary.50"
+            borderRadius={12}
+          />
+          <Input
+            borderColor="#3F3F46"
+            color="primary.200"
+            placeholderTextColor="#71717A"
+            type="password"
+            placeholder="Nhập lại mật khẩu"
+            size="2xl"
+            bgColor="primary.50"
+            borderRadius={12}
+          />
           <Button onPress={onPressSignup} mt="2">
-            Sign up
+            <Text color="primary.200" fontWeight="700">
+              Đăng ký
+            </Text>
           </Button>
-          <Row mt="6" justifyContent="center">
-            <Text>Already have a account? </Text>
-            <Link onPress={onPressSigninLink}>Sign in</Link>
-          </Row>
         </Column>
-      </Box>
-    </Center>
+      </Center>
+      <Center>
+        <Text>
+          Bạn chưa có tài khoản?{' '}
+          <Text
+            color="primary.700"
+            fontWeight="bold"
+            onPress={onPressSignInLink}
+          >
+            Đăng nhập
+          </Text>
+        </Text>
+      </Center>
+    </KeyboardAvoidingView>
   );
 };

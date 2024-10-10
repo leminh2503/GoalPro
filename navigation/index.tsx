@@ -75,7 +75,7 @@ export default function Navigator({ theme }: { theme: ITheme }) {
         theme.config?.initialColorMode === 'dark' ? navDarkTheme : navLightTheme
       }
     >
-      <Stack.Navigator initialRouteName={!token ? 'BottomTab' : 'SignIn'}>
+      <Stack.Navigator initialRouteName="Signin">
         <Stack.Screen
           name="BottomTab"
           component={BottomTabScreen}
@@ -83,13 +83,13 @@ export default function Navigator({ theme }: { theme: ITheme }) {
             headerShown: false,
           }}
         />
-        {RouteList.map(({ title, name, component, isBottom }) => {
+        {RouteList.map(({ title, name, component, isBottom, isHeader }) => {
           if (!isBottom) {
             return (
               <Stack.Screen
                 options={{
-                  headerShown: true,
-                  title: title,
+                  headerShown: isHeader,
+                  title: '',
                   headerLeft: () => <BackButton />,
                 }}
                 name={name}

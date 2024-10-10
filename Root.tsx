@@ -12,6 +12,7 @@ import useAxiosConfig from './hooks/useAxiosConfig';
 // navigation
 import Navigation from './navigation';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { View } from 'react-native';
 
 export const Root: React.FC<{ theme: ITheme }> = ({ theme }) => {
   const isLoadingComplete = useCachedResources();
@@ -24,7 +25,6 @@ export const Root: React.FC<{ theme: ITheme }> = ({ theme }) => {
       {isLoadingComplete && isAxiosSetupComplete && (
         <>
           <Navigation theme={theme} />
-          <StatusBar />
         </>
       )}
     </>

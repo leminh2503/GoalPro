@@ -26,84 +26,103 @@ import { RootState } from '../../lib/redux/store';
 // navigation
 import { RootStackParamList } from '../../navigation/types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { Platform } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Signin'>;
 
 export const SigninScreen: React.FC<Props> = (props) => {
   const dispatch = useDispatch();
   const toast = useToast();
+  const insets = useSafeAreaInsets();
   const { loginInfo } = useSelector((state: RootState) => state.auth);
-  const [username, onChangeUsername] = React.useState(loginInfo?.username);
-  const [password, onChangePassword] = React.useState(loginInfo?.password);
   const [rememberMe, setRememberMe] = React.useState(!!loginInfo?.username);
   const onPressSigninButton = async () => {
-    const values = {
-      username,
-      password,
-    };
+    props.navigation.navigate('BottomTab');
   };
   const onPressSignupLink = () => {
     props.navigation.navigate('Signup');
   };
+
   return (
     <KeyboardAvoidingView
       style={{
         flex: 1,
-        justifyContent: 'center',
+        marginBottom: insets.bottom,
+        justifyContent: 'space-between',
         alignItems: 'center',
       }}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
       <Center width="100%">
-        <Box safeArea p="2" py="8" w="90%">
+        <Column space={2} safeArea p="2" py="8" w="90%">
           <Image
             style={{
-              width: 200,
-              height: 200,
+              width: 100,
+              height: 100,
               alignSelf: 'center',
               marginBottom: 20,
             }}
+            resizeMode="contain"
             source={require('../../assets/images/logo.png')}
           ></Image>
-          <Heading>Welcome to Lan Anh Mart</Heading>
-          <Column space={3} mt="5">
-            <FormControl>
-              <FormControl.Label>Username/Số điện thoại</FormControl.Label>
-              <Input
-                value={username}
-                onChangeText={onChangeUsername}
-                type="text"
-              />
-            </FormControl>
-            <FormControl>
-              <FormControl.Label>Password</FormControl.Label>
-              <Input
-                value={password}
-                onChangeText={onChangePassword}
-                type="password"
-              />
-            </FormControl>
-            <Row space={3} width="100%">
-              <Checkbox
-                value=""
-                isChecked={rememberMe}
-                onChange={setRememberMe}
-              >
-                Remember me
-              </Checkbox>
-              <Spacer />
-              <Text>Forget Password?</Text>
-            </Row>
-            <Button onPress={onPressSigninButton} mt="2">
-              Sign in
-            </Button>
-            {/*<Row mt="6" justifyContent="center">*/}
-            {/*  <Text>I&apos;m a new user. </Text>*/}
-            {/*  <Link onPress={onPressSignupLink}>Sign Up</Link>*/}
-            {/*</Row>*/}
-          </Column>
-        </Box>
+          <Heading color="primary.700" textAlign="center" size="2xl">
+            Đăng nhập
+          </Heading>
+          <Text color="primary.100" textAlign="center">
+            Đăng nhập vào tài khoản của bạn
+          </Text>
+          <Input
+            borderColor="#3F3F46"
+            color="primary.200"
+            placeholderTextColor="#71717A"
+            mt={3}
+            type="text"
+            placeholder="Email"
+            size="2xl"
+            bgColor="primary.50"
+            borderRadius={12}
+          />
+          <Input
+            borderColor="#3F3F46"
+            color="primary.200"
+            placeholderTextColor="#71717A"
+            type="password"
+            placeholder="Mật khẩu"
+            size="2xl"
+            bgColor="primary.50"
+            borderRadius={12}
+          />
+          <Row space={3} width="100%" mt={3}>
+            <Checkbox
+              value=""
+              isChecked={rememberMe}
+              onChange={setRememberMe}
+              color="primary.100"
+            >
+              <Text>Ghi nhớ đăng nhập</Text>
+            </Checkbox>
+            <Spacer />
+            <Text color="primary.400">Quên mật khẩu?</Text>
+          </Row>
+          <Button onPress={onPressSigninButton} mt="2">
+            <Text color="primary.200" fontWeight="700">
+              Đăng nhập
+            </Text>
+          </Button>
+        </Column>
+      </Center>
+      <Center>
+        <Text>
+          Bạn chưa có tài khoản?{' '}
+          <Text
+            color="primary.700"
+            fontWeight="bold"
+            onPress={onPressSignupLink}
+          >
+            Đăng ký
+          </Text>
+        </Text>
       </Center>
     </KeyboardAvoidingView>
   );

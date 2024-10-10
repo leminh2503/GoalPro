@@ -30,7 +30,7 @@ const BottomTabContent = React.memo(function BottomTabContent() {
     }
 
     if (name === currentRoute) {
-      return '#5386F7';
+      return 'primary.700';
     }
 
     return '';

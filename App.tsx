@@ -1,6 +1,9 @@
 // core
 import React from 'react';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import {
+  SafeAreaProvider,
+  useSafeAreaInsets,
+} from 'react-native-safe-area-context';
 
 // components & theme
 import { NativeBaseProvider, Spinner } from 'native-base';
@@ -20,6 +23,7 @@ export default function App() {
   // Changing initialColorMode to 'dark' or 'light' or system(mode)
   theme.config.initialColorMode = mode;
   LogBox.ignoreAllLogs();
+
   return (
     <NativeBaseProvider theme={theme}>
       <ReduxProvider store={store}>
@@ -29,7 +33,6 @@ export default function App() {
               flex: 1,
             }}
           >
-            <StatusBar />
             <Root theme={theme} />
           </SafeAreaProvider>
         </PersistGate>
