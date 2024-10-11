@@ -1,41 +1,34 @@
-<img src="https://bocorolulpdyyqsfyaux.supabase.co/storage/v1/object/public/social_media/demo/0_logo.jpg?t=2024-10-10T06%3A55%3A10.154Z" width="100" height="100">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/logo.png?raw=true" width="100" height="100">
 
-# SciRoom Application
+# PRO FOOTBALL Application
 
-SciRoom is a social network designed to foster the exchange of information and ideas in science and technology. It is a dynamic platform for students, educators, and professionals to share knowledge through articles, discussions, and multimedia resources.
+PRO FOOTBALL is a social network designed to foster the exchange of information and ideas in science and technology. It is a dynamic platform for students, educators, and professionals to share knowledge through articles, discussions, and multimedia resources.
 
 ## Key Features
 
 **User Authentication**: Users can register and log in using their email and password, ensuring secure access.
 
-![alt text](https://github.com/tuanna-kite/SciRoom/blob/main/demo/1.png?raw=true)
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/1.jpg?raw=true" width="120">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/2.jpg?raw=true" width="120">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/3.jpg?raw=true" width="120">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/11.jpg?raw=true" width="120">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/12.jpg?raw=true" width="120">
 
 ## **For Regular Users**:
 
-- **View and Interact**: Browse scientific articles shared by other users and like or comment on articles of interest.
-- **Content Creation**: Write and share your own articles, with support for HTML formatting to make your content structured and visually appealing.
-- **Multimedia Support**: Upload photos and videos along with your articles for better engagement.
-- **Content Reporting**: Report any articles containing unethical or inappropriate content.
-- **Professor Verification**: Verified professors are marked with a blue tick, giving their content credibility.
-- **Content Moderation**: Ability to block offensive, violent, or sensitive comments or articles.
-- **Infinite Scroll & Pagination**: For smooth navigation and better data transmission efficiency.
+- **Training**: A list of football training exercises, including tactics, details of the training sessions, and the equipment needed to prepare.
+- **Strategy**: Tactical articles in football, with detailed views on the tactical articles.
+- **Lesson Plan**: Articles on training plans in football, detailing the techniques and equipment needed to achieve the best results.
 
-![alt text](https://github.com/tuanna-kite/SciRoom/blob/main/demo/2.png?raw=true)
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/4.jpg?raw=true" width="120">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/5.jpg?raw=true" width="120">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/7.jpg?raw=true" width="120">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/8.jpg?raw=true" width="120">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/9.jpg?raw=true" width="120">
 
-### **For Admins**
-
-- **User and Content Management**: View statistics on total users and articles, search users by email, and manage reports of content violations.
-- **User Blocking**: Admins can block users who violate ethical standards or frequently use violent language.
-- **Report Handling**: Admins can review reports and delete violating posts from the system.
-
-![alt text](https://github.com/tuanna-kite/SciRoom/blob/main/demo/3.png?raw=true)
 
 ### Technology Stack
 
 - **React Native**: Powers the cross-platform development, enabling the application to run smoothly on both iOS and Android devices.
 - **Redux Toolkit**: Manages global state efficiently, ensuring that user actions, like liking articles or commenting, update instantly across the app.
-
-- **Supabase**:
-    - **Authentication**: Secure and scalable user authentication with email and password, allowing easy user management.
-    - **Realtime Database**: Provides live updates to articles, comments, and likes, allowing users to interact with the latest information instantly.
-    - **File Storage**: Supports the storage and retrieval of multimedia content, such as images and videos, ensuring users can upload and access rich content with ease.
+- **React Native Base**: React Native Base is a UI component library for React Native, offering customizable and reusable components to streamline mobile app development. It focuses on performance and ease of use, helping developers create consistent user interfaces quickly.
