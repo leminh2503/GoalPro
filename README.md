@@ -8,11 +8,11 @@ PRO FOOTBALL is a social network designed to foster the exchange of information 
 
 **User Authentication**: Users can register and log in using their email and password, ensuring secure access.
 <div style="display: flex; gap: 8px">
-<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/1.jpg?raw=true" width="200">
-<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/2.jpg?raw=true" width="200">
-<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/3.jpg?raw=true" width="200">
-<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/11.jpg?raw=true" width="200">
-<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/12.jpg?raw=true" width="200">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/1.jpg?raw=true" width="180">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/2.jpg?raw=true" width="180">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/3.jpg?raw=true" width="180">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/11.jpg?raw=true" width="180">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/12.jpg?raw=true" width="180">
 </div>
 
 ## **For Regular Users**:Readme
@@ -22,11 +22,11 @@ PRO FOOTBALL is a social network designed to foster the exchange of information 
 - **Lesson Plan**: Articles on training plans in football, detailing the techniques and equipment needed to achieve the best results.
 
 <div style="display: flex; gap: 8px">
-<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/4.jpg?raw=true" width="200">
-<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/5.jpg?raw=true" width="200">
-<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/7.jpg?raw=true" width="200">
-<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/8.jpg?raw=true" width="200">
-<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/9.jpg?raw=true" width="200">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/4.jpg?raw=true" width="180">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/5.jpg?raw=true" width="180">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/7.jpg?raw=true" width="180">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/8.jpg?raw=true" width="180">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/9.jpg?raw=true" width="180">
 </div>
 
 ### Technology Stack
