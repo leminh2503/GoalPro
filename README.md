@@ -1,221 +1,41 @@
-# React Native Base App
+<img src="https://bocorolulpdyyqsfyaux.supabase.co/storage/v1/object/public/social_media/demo/0_logo.jpg?t=2024-10-10T06%3A55%3A10.154Z" width="100" height="100">
 
-# Guide Run App
+# SciRoom Application
 
-- Step 1: install node_modules
+SciRoom is a social network designed to foster the exchange of information and ideas in science and technology. It is a dynamic platform for students, educators, and professionals to share knowledge through articles, discussions, and multimedia resources.
 
-```bash
-npm i
-```
+## Key Features
 
-- Step 2: start app
+**User Authentication**: Users can register and log in using their email and password, ensuring secure access.
 
-```bash
-expo start
-```
+![alt text](https://github.com/tuanna-kite/SciRoom/blob/main/demo/1.png?raw=true)
 
-- Step 3: open application ios/android/web
+## **For Regular Users**:
 
-```bash
-expo start --ios
-expo start --android
-expo start --web
-```
+- **View and Interact**: Browse scientific articles shared by other users and like or comment on articles of interest.
+- **Content Creation**: Write and share your own articles, with support for HTML formatting to make your content structured and visually appealing.
+- **Multimedia Support**: Upload photos and videos along with your articles for better engagement.
+- **Content Reporting**: Report any articles containing unethical or inappropriate content.
+- **Professor Verification**: Verified professors are marked with a blue tick, giving their content credibility.
+- **Content Moderation**: Ability to block offensive, violent, or sensitive comments or articles.
+- **Infinite Scroll & Pagination**: For smooth navigation and better data transmission efficiency.
 
-# Video Demo Application
+![alt text](https://github.com/tuanna-kite/SciRoom/blob/main/demo/2.png?raw=true)
 
-[demo.mp4](https://drive.google.com/file/d/1GayzkhuQh-Fku0I8uY7RG28ddp04yBBE/view?usp=sharing)
+### **For Admins**
 
-## Main libraries
+- **User and Content Management**: View statistics on total users and articles, search users by email, and manage reports of content violations.
+- **User Blocking**: Admins can block users who violate ethical standards or frequently use violent language.
+- **Report Handling**: Admins can review reports and delete violating posts from the system.
 
-- [React Native](https://reactnative.dev/)
-- [Expo](https://expo.dev/)
-- [React Navigation](https://reactnavigation.org/)
-- [Native Base](https://nativebase.io/)
-- [Redux(toolkit)](https://redux-toolkit.js.org/)
+![alt text](https://github.com/tuanna-kite/SciRoom/blob/main/demo/3.png?raw=true)
 
-## Example of an app using this template
+### Technology Stack
 
-https://github.com/qlawmarq/pokemon-sv-clock
+- **React Native**: Powers the cross-platform development, enabling the application to run smoothly on both iOS and Android devices.
+- **Redux Toolkit**: Manages global state efficiently, ensuring that user actions, like liking articles or commenting, update instantly across the app.
 
-## API Server & DB Server
-
-If you need API and DB server, please clone from the following:  
-https://github.com/qlawmarq/fastapi-mysql-docker
-
-## Development
-
-This app are using `Expo CLI`, and it will be install in your local `node_modules`.
-
-Minimum setup for development is just following commands:
-
-```bash
-npm i
-expo start 
-```
-
-Now you are ready to develop your app, and you can check your app in a web browser or in the simulator of iOS/Android
-OS.
-
-Please check here for deatils:
-
-- https://reactnative.dev/docs/environment-setup
-- https://docs.expo.dev/get-started/installation/
-
-## Building Native App
-
-This app is using EAS Build for distribution.
-
-EAS Build is a hosted service for building app binaries for your Expo and React Native projects.
-
-Also, this app includes the EAS CLI as a dependency, so you can build it by just entering commands.
-
-```bash
-expo build:android
-expo build:ios
-```
-
-Please check following for more details:
-
-- https://docs.expo.dev/build/introduction/
-
-### Android
-
-```bash
-expo login
-expo build:android
-expo submit:android
-```
-
-### iOS
-
-```bash
-expo login
-expo build:ios
-expo submit:ios
-```
-
-## Building Web App
-
-```bash
-expo build:web
-```
-
-Please check following for more details:
-
-- https://docs.expo.dev/distribution/publishing-websites/
-
-## Guide
-
-### Expo
-
-This app is using Expo to make your development easier and faster.
-Also it make easily publish testing app with using Expo.
-
-For more informations, please check [Expo.dev](https://docs.expo.dev/).
-
-### Configuration
-
-You can set the name of the app, version, permissions, etc. through `app.json`.
-
-https://docs.expo.dev/versions/latest/config/app/
-
-### State/Storage
-
-This app are using [Redux(toolkit)](https://redux-toolkit.js.org/) for state management,
-and [Redux Persist](https://github.com/rt2zz/redux-persist) for persisting store's state when app reload.  
-And also using [Async Storage](https://react-native-async-storage.github.io/async-storage/) for data storage.
-
-Here is an example case of getting stored data:
-
-```ts
-// state(redux)
-import { useSelector } from 'react-redux';
-import { RootState } from '../lib/redux/store';
-
-// get user & token from redux
-const { user, token } = useSelector((state: RootState) => state.auth);
-```
-
-### Theme
-
-The theme settings of the app can be changed in `theme.ts`.  
-You can customize color schema, style of component, font style, and more.
-
-Learn more about extending/customizing theme:
-
-- https://docs.nativebase.io/default-theme
-- https://docs.nativebase.io/customizing-theme
-- https://docs.nativebase.io/customizing-components
-- https://docs.nativebase.io/utility-props#style-props
-- https://reactnavigation.org/docs/themes/
-
-Regarding dark mode and light mode, basically, it automatically sets by user's enviroment.  
-However, it is also possible to set them manually:
-
-```ts
-import { theme } from './theme';
-
-const mode = useColorScheme();
-// you can set `dark` or `light` instead of system mode
-theme.config.initialColorMode = mode;
-```
-
-The color theme for the component will also be set automatically, but you can customize them manually:
-
-```tsx
-<View
-  _light={{
-    borderColor: 'light.border',
-  }}
-  _dark={{
-    borderColor: 'dark.border',
-  }}
-/>
-```
-
-### Navigation
-
-You can setup routing inside of `navigation` folder.  
-For more information, Please check [React Navigation](https://reactnavigation.org/) website.
-
-### External API calling
-
-This app are using [Axios](https://axios-http.com/) for API calling.
-The configuration of axios is inside of `lib/axios` folder.
-
-Already, there is some example of authentification api.
-Of course, you can add your own api in `lib/axios`.
-
-### Icon
-
-You can explore the built-in icon families and icons on the web at following:
-
-- https://icons.expo.fyi/
-
-```ts
-import { Icon } from 'native-base';
-import { Feather } from '@expo/vector-icons';
-```
-
-## Giới thiệu về ứng dụng
-
-### Mục đích sử dụng
-
-- Ứng dụng được sử dụng với mục đích quản lý tài chính. Quản lý chi tiêu hàng ngày. Thống kê tài chính cá nhân.
-
-### Các chức năng chính
-
-- Nhập thông tin chi tiêu
-- Nhập thông tin thu nhập
-- Quản lý giao dịch thu chi
-- Thống kê tài chính theo ngày, tháng, năm
-
-### Công nghệ sử dụng
-
-- React Native
-- Expo
-- Redux(toolkit)
-- Axios
-- Async Storage
-
+- **Supabase**:
+    - **Authentication**: Secure and scalable user authentication with email and password, allowing easy user management.
+    - **Realtime Database**: Provides live updates to articles, comments, and likes, allowing users to interact with the latest information instantly.
+    - **File Storage**: Supports the storage and retrieval of multimedia content, such as images and videos, ensuring users can upload and access rich content with ease.
