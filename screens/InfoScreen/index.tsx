@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Box,
+  Column,
   FlatList,
   Heading,
   Image,
@@ -12,49 +13,103 @@ import {
 import { IconCamera } from '../../assets/icon/IconCamera';
 import { homeData } from '../../data/home';
 import { useNavigation } from '@react-navigation/native';
+import { IconBack } from '../../assets/icon/IconBack';
+import { IconChangeAvatar } from '../../assets/icon/IconChangeAvatar';
+import { IconPeople } from '../../assets/icon/IconPeople';
+import { IconRight } from '../../assets/icon/IconRight';
+import { IconKey } from '../../assets/icon/IconKey';
+import { IconBell } from '../../assets/icon/IconBell';
+import { IconSignOut } from '../../assets/icon/IconSignOut';
+import { Switch } from 'react-native';
 
 export const InfoScreen = () => {
   const navigation = useNavigation();
   return (
     <ScrollView>
-      <Box px="16px">
-        <Heading my={4} size="md" color="primary.200">
-          TẬP LUYỆN
+      <Column
+        safeArea
+        px="16px"
+        width="100%"
+        justifyContent="center"
+        alignItems="center"
+        space={4}
+      >
+        <Heading textAlign="center" color="primary.200" size="md">
+          Cá nhân
         </Heading>
-
-        <FlatList
-          data={homeData}
-          numColumns={2} // Hiển thị 2 cột
-          keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item, index }) => (
-            <Pressable
-              onPress={() =>
-                navigation.navigate('Training', {
-                  item: item,
-                })
-              }
-              key={item.id}
-              mt={2}
-              mr={index % 2 === 0 ? 2 : 0}
-              flexBasis="48%"
-              bgColor="#3F3F46"
-              borderRadius="16"
-              px="16px"
-              py="12px"
-            >
-              <Heading size="md" color="primary.200">
-                {item.title}
-              </Heading>
-              <Row space={1} alignItems="center">
-                <Box height={0.5} flex={1} bgColor="primary.100"></Box>
-                <IconCamera />
-              </Row>
-              <Text color="primary.200">{item.videoCount} video</Text>
-            </Pressable>
-          )}
-          contentContainerStyle={{ paddingBottom: 80 }}
-        />
-      </Box>
+        <Box>
+          <Image
+            source={{
+              uri: 'https://s3-alpha-sig.figma.com/img/23b9/dd21/1624cf0ebaa4dde2c075ad6fa6ee8f5d?Expires=1729468800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hohYeQJopfLYzKuNiaDtJ8FzIWZSoWMgn0kTMoovpxE8TcGRHs3SBlP1vOYX~zMm5nurln72-CqXwO9Bb4unKpe-if7gk1cEwZ95MqUWLqrU1l~OmF8NLKAh19WFYL5x5i1rUYY~na1W7yqHWgASThxf4657tcyTOE9QCFazhv1mUCoHXeljFNYKQBQS2SntKJmktbb6w1I88Ad8DjWL5DGQKl-22cjiNqYlMt1NB2W6~umFGpyKPnuEQd1uRYnMHP7w-FosqXoF9a6DjgSd~pLhsrkZJJ8xYd0pYC4MxN4fn1VY6gZcn4wnGtGATQUWD75Qw~hu~N5MQjyoRkGqNA__',
+            }}
+            height="108"
+            resizeMode="cover"
+            width="108"
+            style={{ borderRadius: 54 }}
+          />
+        </Box>
+        <Heading color="primary.200">Edmund Corkery</Heading>
+        <Pressable onPress={() => navigation.navigate('InfoDetail')}>
+          <Row
+            space={3}
+            width="100%"
+            alignItems="center"
+            justifyContent="space-between"
+          >
+            <Box width={12} height={12} borderRadius={8} p={3} bg="primary.500">
+              <IconPeople width={24} height={24} color="#71717A" />
+            </Box>
+            <Text flex={1} color="primary.200" fontWeight="bold" fontSize="lg">
+              Thông tin
+            </Text>
+            <IconRight />
+          </Row>
+        </Pressable>
+        <Pressable onPress={() => navigation.navigate('ChangePassword')}>
+          <Row
+            space={3}
+            width="100%"
+            alignItems="center"
+            justifyContent="space-between"
+          >
+            <Box width={12} height={12} borderRadius={8} p={3} bg="primary.500">
+              <IconKey width={24} height={24} />
+            </Box>
+            <Text flex={1} color="primary.200" fontWeight="bold" fontSize="lg">
+              Đổi mật khẩu
+            </Text>
+            <IconRight />
+          </Row>
+        </Pressable>
+        <Row
+          space={3}
+          width="100%"
+          alignItems="center"
+          justifyContent="space-between"
+        >
+          <Box width={12} height={12} borderRadius={8} p={3} bg="primary.500">
+            <IconBell width={24} height={24} />
+          </Box>
+          <Text flex={1} color="primary.200" fontWeight="bold" fontSize="lg">
+            Thông báo
+          </Text>
+          <Switch />
+        </Row>
+        <Row
+          space={3}
+          width="100%"
+          alignItems="center"
+          justifyContent="space-between"
+        >
+          <Box width={12} height={12} borderRadius={8} p={3} bg="primary.500">
+            <IconSignOut width={24} height={24} />
+          </Box>
+          <Text flex={1} color="primary.200" fontWeight="bold" fontSize="lg">
+            Đăng xuất
+          </Text>
+          <IconRight />
+        </Row>
+      </Column>
     </ScrollView>
   );
 };

@@ -7,6 +7,10 @@ import { TrainingDetailScreen } from '../screens/HomeScreen/TrainingDetail';
 import { StrategyScreen } from '../screens/StrategyScreen';
 import { LessonScreen } from '../screens/LessonScreen';
 import { InfoScreen } from '../screens/InfoScreen';
+import { StrategyDetailScreen } from '../screens/StrategyScreen/StrategyDetailScreen';
+import { LessonDetailScreen } from '../screens/LessonScreen/LessonDetailScreen';
+import { InfoDetailScreen } from '../screens/InfoScreen/InfoDetail';
+import { ChangePassword } from '../screens/InfoScreen/ChangePassword';
 
 export enum IconBottom {
   HOME = 'HOME',
@@ -16,6 +20,38 @@ export enum IconBottom {
 }
 
 const routes: any[] = [
+  {
+    component: InfoDetailScreen,
+    name: 'InfoDetail',
+    title: 'Thông tin',
+    isAuth: false,
+    isBottom: false,
+    isHeader: true,
+  },
+  {
+    component: ChangePassword,
+    name: 'ChangePassword',
+    title: 'Đổi mật khẩu',
+    isAuth: false,
+    isBottom: false,
+    isHeader: true,
+  },
+  {
+    component: LessonDetailScreen,
+    name: 'LessonDetail',
+    title: '',
+    isAuth: false,
+    isBottom: false,
+    isHeader: false,
+  },
+  {
+    component: StrategyDetailScreen,
+    name: 'StrategyDetail',
+    title: '',
+    isAuth: false,
+    isBottom: false,
+    isHeader: false,
+  },
   {
     component: TrainingDetailScreen,
     name: 'TrainingDetail',

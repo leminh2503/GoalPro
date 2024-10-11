@@ -89,7 +89,11 @@ export default function Navigator({ theme }: { theme: ITheme }) {
               <Stack.Screen
                 options={{
                   headerShown: isHeader,
-                  title: '',
+                  title: title,
+                  headerTitleStyle: {
+                    color: 'white',
+                    fontSize: 20,
+                  },
                   headerLeft: () => <BackButton />,
                 }}
                 name={name}

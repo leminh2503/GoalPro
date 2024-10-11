@@ -12,7 +12,7 @@ export const BackButton = () => {
         navigation.goBack();
       }}
     >
-      <Icon as={MaterialIcons} name="chevron-left" size="30" />
+      <Icon as={MaterialIcons} name="chevron-left" size="30" color="white" />
     </Pressable>
   );
 };

@@ -95,15 +95,21 @@ export const TrainingDetailScreen = () => {
           <Row alignItems="center" space={8}>
             <Row alignItems="center" space={1}>
               <IconBall />
-              <Text color="primary.200">x 1</Text>
+              <Text color="primary.200">
+                x {route.params?.item.detail.prepare.ball}
+              </Text>
             </Row>
             <Row alignItems="center" space={1}>
               <IconGoal />
-              <Text color="primary.200">x 1</Text>
+              <Text color="primary.200">
+                x {route.params?.item.detail.prepare.goal}
+              </Text>
             </Row>
             <Row alignItems="center" space={1}>
               <IconHandFan />
-              <Text color="primary.200">x 2</Text>
+              <Text color="primary.200">
+                x {route.params?.item.detail.prepare.fan}
+              </Text>
             </Row>
           </Row>
         </Column>
