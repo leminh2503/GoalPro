@@ -3,12 +3,12 @@
     "policy": "sdkVersion"
   },
   "expo": {
-    "name": "rn-base-app",
-    "slug": "finacial-app",
+    "name": "Pro-Football",
+    "slug": "pro-football",
     "version": "2.0.0",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "myapp-football",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
@@ -31,7 +31,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.sampleapp",
+      "package": "com.football",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
@@ -43,7 +43,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "6cb636ae-6943-4779-bca9-c68d1bf60fd9"
+        "projectId": "a179f5f2-9ced-4b02-88b2-da63960d0a73"
       }
     },
     "owner": "minhpm"
