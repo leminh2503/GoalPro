@@ -95,20 +95,22 @@ export const InfoScreen = () => {
           </Text>
           <Switch />
         </Row>
-        <Row
-          space={3}
-          width="100%"
-          alignItems="center"
-          justifyContent="space-between"
-        >
-          <Box width={12} height={12} borderRadius={8} p={3} bg="primary.500">
-            <IconSignOut width={24} height={24} />
-          </Box>
-          <Text flex={1} color="primary.200" fontWeight="bold" fontSize="lg">
-            Đăng xuất
-          </Text>
-          <IconRight />
-        </Row>
+        <Pressable onPress={() => navigation.navigate('Signin')}>
+          <Row
+            space={3}
+            width="100%"
+            alignItems="center"
+            justifyContent="space-between"
+          >
+            <Box width={12} height={12} borderRadius={8} p={3} bg="primary.500">
+              <IconSignOut width={24} height={24} />
+            </Box>
+            <Text flex={1} color="primary.200" fontWeight="bold" fontSize="lg">
+              Đăng xuất
+            </Text>
+            <IconRight />
+          </Row>
+        </Pressable>
       </Column>
     </ScrollView>
   );

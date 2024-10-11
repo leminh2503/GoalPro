@@ -47,6 +47,7 @@ export const InfoDetailScreen = () => {
         <Input
           borderColor="#3F3F46"
           color="primary.200"
+          value="Edmund Corkery"
           placeholderTextColor="#71717A"
           mt={1}
           type="text"
@@ -62,7 +63,7 @@ export const InfoDetailScreen = () => {
           placeholderTextColor="#71717A"
           mt={1}
           type="text"
-          placeholder="Email"
+          placeholder="edmundcorkery@gmail.com"
           size="2xl"
           bgColor="primary.50"
           borderRadius={12}
@@ -74,7 +75,7 @@ export const InfoDetailScreen = () => {
           placeholderTextColor="#71717A"
           mt={1}
           type="text"
-          placeholder="Email"
+          placeholder="Số điện thoại"
           size="2xl"
           bgColor="primary.50"
           borderRadius={12}

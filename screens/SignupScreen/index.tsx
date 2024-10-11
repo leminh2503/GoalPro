@@ -38,7 +38,7 @@ export const SignupScreen: React.FC<Props> = (props) => {
       }}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      <Center width="100%">
+      <Center safeArea width="100%">
         <Column space={2} p="2" py="8" w="90%">
           <Image
             style={{

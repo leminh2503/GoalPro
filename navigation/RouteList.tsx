@@ -91,6 +91,7 @@ const routes: any[] = [
     isAuth: false,
     isBottom: true,
     icon: IconBottom.LESSON,
+    isHeader: false,
   },
   {
     component: InfoScreen,
@@ -99,24 +100,28 @@ const routes: any[] = [
     isAuth: false,
     isBottom: true,
     icon: IconBottom.INFO,
+    isHeader: false,
   },
   {
     component: OtpScreen,
     name: 'Otp',
     title: 'Otp',
     isAuth: false,
+    isHeader: false,
   },
   {
     component: SignupScreen,
     name: 'Signup',
     title: 'Signup',
     isAuth: false,
+    isHeader: false,
   },
   {
     component: SigninScreen,
     name: 'Signin',
     title: 'Signin',
     isAuth: false,
+    isHeader: false,
     isHeader: false,
   },
 ];
