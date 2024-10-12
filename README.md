@@ -26,7 +26,7 @@ PRO FOOTBALL is a social network designed to foster the exchange of information 
 <div style="display: flex; gap: 8px">
 <img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/4.jpg?raw=true" width="180">
 <img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/5.jpg?raw=true" width="180">
-<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/7.jpg?raw=true" width="180">
+<img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/7.jpg?readmeraw=true" width="180">
 <img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/8.jpg?raw=true" width="180">
 <img src="https://github.com/leminh2503/football-tutorial/blob/main/assets/readme/9.jpg?raw=true" width="180">
 </div>
