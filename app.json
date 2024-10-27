@@ -3,12 +3,12 @@
     "policy": "sdkVersion"
   },
   "expo": {
-    "name": "Pro-Football",
-    "slug": "pro-football",
+    "name": "GoalPro",
+    "slug": "Goal-Pro",
     "version": "2.0.0",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp-football",
+    "scheme": "Goal-Pro",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
