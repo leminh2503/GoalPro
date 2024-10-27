@@ -1,52 +1,52 @@
 export const homeData = [
   {
     id: 1,
-    title: 'KỸ THUẬT SÚT',
+    title: 'Kỹ thuật sút',
     videoCount: 128,
   },
   {
     id: 2,
-    title: 'KỸ THUẬT CHUYỀN',
+    title: 'Kỹ thuật chuyền',
     videoCount: 128,
   },
   {
     id: 3,
-    title: 'KỸ THUẬT RÊ BÓNG',
+    title: 'Kỹ thuật rê bóng',
     videoCount: 128,
   },
   {
     id: 4,
-    title: 'KỸ THUẬT PHÒNG NGỰ',
+    title: 'Kỹ thuật phòng ngự',
     videoCount: 128,
   },
   {
     id: 5,
-    title: 'KỸ THUẬT CHẠY',
+    title: 'Kỹ thuật chạy',
     videoCount: 128,
   },
   {
     id: 6,
-    title: 'KỸ THUẬT XỎ HÁNG',
+    title: 'Kỹ thuật xỏ háng',
     videoCount: 128,
   },
   {
     id: 7,
-    title: 'KỸ THUẬT TÂNG BÓNG',
+    title: 'Kỹ thuật tâng bóng',
     videoCount: 128,
   },
   {
     id: 8,
-    title: 'KỸ THUẬT PHỐI HỢP',
+    title: 'Kỹ thuật phối hợp',
     videoCount: 128,
   },
   {
     id: 9,
-    title: 'KỸ THUẬT KHỞI ĐỘNG',
+    title: 'Kỹ thuật khởi động',
     videoCount: 128,
   },
   {
     id: 10,
-    title: 'LUYỆN TẬP CƠ BẮP',
+    title: 'Luyện tập cơ bắp',
     videoCount: 128,
   },
 ];
@@ -55,6 +55,7 @@ export const trainingData = [
   {
     title: 'Đỡ bóng bằng ngực rồi sút',
     level: 'Bán chuyên',
+    image: require('../assets/images/training/img.png'),
     detail: {
       level: 'Bán chuyên',
       repeat: '10 lần',
@@ -73,6 +74,7 @@ export const trainingData = [
   {
     title: 'Sút cắt đôi',
     level: 'Chuyên nghiệp',
+    image: require('../assets/images/training/img_1.png'),
     detail: {
       level: 'Bán chuyên',
       repeat: '10 lần',
@@ -92,6 +94,7 @@ export const trainingData = [
   {
     title: 'Sút tinh tế',
     level: 'Đỉnh cao',
+    image: require('../assets/images/training/img_2.png'),
     detail: {
       level: 'Bán chuyên',
       repeat: '10 lần',
@@ -110,6 +113,7 @@ export const trainingData = [
   {
     title: 'Sút góc hẹp',
     level: 'Đỉnh cao',
+    image: require('../assets/images/training/img_3.png'),
     detail: {
       level: 'Bán chuyên',
       repeat: '10 lần',
@@ -128,6 +132,7 @@ export const trainingData = [
   {
     title: 'Sút xoáy',
     level: 'Đỉnh cao',
+    image: require('../assets/images/training/img_4.png'),
     detail: {
       level: 'Bán chuyên',
       repeat: '10 lần',

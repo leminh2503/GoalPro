@@ -41,11 +41,11 @@ export const TrainingScreen = () => {
           >
             <Image
               style={{ height: 200, borderRadius: 16 }}
-              source={require('../../../assets/images/img_1.png')}
+              source={item.image}
             />
             <Row mt={2} justifyContent="space-between" alignItems="center">
               <Text color="primary.200" fontWeight="bold" flex={1}>
-                Đỡ bóng bằng ngực rồi sút
+                {item.title}
               </Text>
               <Row space={1} alignItems="center">
                 <IconLevel />

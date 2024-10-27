@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import {
   getFocusedRouteNameFromRoute,
@@ -9,12 +9,7 @@ import {
 import RouteList, { IconBottom } from './RouteList';
 import { RootState } from '../lib/redux/store';
 import { useDispatch, useSelector } from 'react-redux';
-import { ApiService } from '../lib/axios';
-import { setListInvoice } from '../lib/redux/reducers/invoiceReducer';
 import { IconHome } from '../assets/icon/IconHome';
-import { IconCalendar } from '../assets/icon/IconCalendar';
-import { IconThreeDots } from '../assets/icon/IconThreeDots';
-import { IconChart } from '../assets/icon/IconChart';
 import { IconStrategy } from '../assets/icon/IconStrategy';
 import { IconLesson } from '../assets/icon/IconLesson';
 import { IconPeople } from '../assets/icon/IconPeople';
@@ -31,11 +26,11 @@ const BottomTabContent = React.memo(function BottomTabContent() {
 
   const getColor = (name: string, index: number): string => {
     if (currentRoute === undefined) {
-      return index === 0 ? '#EB4442' : '';
+      return index === 0 ? '#00CD38' : '';
     }
 
     if (name === currentRoute) {
-      return '#EB4442';
+      return '#00CD38';
     }
 
     return '#71717A';

@@ -17,10 +17,7 @@ export const TrainingDetailScreen = () => {
   const navigation = useNavigation();
   return (
     <Box position="relative">
-      <Image
-        style={{ height: 250 }}
-        source={require('../../../assets/images/img_2.png')}
-      />
+      <Image style={{ height: 250 }} source={route.params?.item?.image} />
       <Pressable
         onPress={() => navigation.goBack()}
         position="absolute"

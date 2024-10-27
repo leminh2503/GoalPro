@@ -19,8 +19,8 @@ export const LessonScreen = () => {
         <Heading my={4} size="md" color="primary.200" textAlign="center">
           Chiến thuật và kiến thức
         </Heading>
-        <Heading size="lg" color="primary.700">
-          KHÁM PHÁ
+        <Heading size="md" color="primary.700">
+          Khám phá
         </Heading>
         <FlatList
           showsHorizontalScrollIndicator={false}
@@ -40,7 +40,7 @@ export const LessonScreen = () => {
             >
               <Image
                 style={{ height: 96, borderRadius: 16 }}
-                source={{ uri: item.img }}
+                source={item.image}
               />
               <Text
                 mt={1}
@@ -58,8 +58,8 @@ export const LessonScreen = () => {
           )}
           horizontal
         />
-        <Heading size="lg" color="primary.700" mt={2}>
-          TẤT CẢ BÀI VIẾT
+        <Heading size="md" color="primary.700" mt={2}>
+          Tất cả bài viết
         </Heading>
         <FlatList
           contentContainerStyle={{ paddingBottom: 50 }}
@@ -83,7 +83,7 @@ export const LessonScreen = () => {
                   borderRadius: 16,
                 }}
                 resizeMode="cover"
-                source={{ uri: item.img }}
+                source={item.image}
               />
               <Text mt={1} fontSize="md" color="primary.200" fontWeight="bold">
                 {item.title}

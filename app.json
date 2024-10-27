@@ -13,7 +13,7 @@
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#EB4442"
+      "backgroundColor": "#00CD38"
     },
     "plugins": [
       "expo-font",

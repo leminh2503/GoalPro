@@ -23,7 +23,7 @@ export const LessonDetailScreen = () => {
         height={250}
         width="100%"
         resizeMode="cover"
-        source={{ uri: route.params?.item?.img ?? '' }}
+        source={route.params?.item?.image}
       />
       <Pressable
         onPress={() => navigation.goBack()}
